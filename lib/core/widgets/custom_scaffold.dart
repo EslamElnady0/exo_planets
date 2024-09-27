@@ -1,4 +1,3 @@
-import 'package:exo_planets/core/helpers/app_assets.dart';
 import 'package:flutter/material.dart';
 
 class CustomScaffold extends StatelessWidget {
@@ -38,10 +37,10 @@ class CustomScaffold extends StatelessWidget {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-              AppAssets.splashBg,
+              backgroundImage,
             ),
             fit: BoxFit.cover,
           ),

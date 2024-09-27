@@ -84,9 +84,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
     _controller.forward();
 
     Future.delayed(const Duration(milliseconds: 3500), () {
-      context.pushNamedAndRemoveUntil(
+      context.pushReplacementNamed(
         AppRouter.onboarding,
-        predicate: (route) => false,
       );
     });
   }
