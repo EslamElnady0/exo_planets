@@ -1,6 +1,6 @@
 class AppAssets {
   const AppAssets._();
-
+//////////////////////   pngs //////////////////////    //////
   static const String logo = 'assets/images/logo.png';
   static const String xPlanetsSplash = 'assets/images/xPlanetsSplash.png';
   static const String onboardingFirst = 'assets/images/onboardingFirst.png';
@@ -10,4 +10,7 @@ class AppAssets {
   static const String splashBg = 'assets/images/splashBg.png';
   static const String eImage = 'assets/images/eImage.png';
   static const String oImage = 'assets/images/oImage.png';
+
+  ////////////////////// svgs //////////////////////    //////
+  static const String arrowForward = 'assets/svgs/arrowForward.svg';
 }

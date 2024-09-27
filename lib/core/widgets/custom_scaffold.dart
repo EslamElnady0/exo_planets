@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CustomScaffold extends StatelessWidget {
   final PreferredSizeWidget? appBar;
   final Widget? body;
-  final String backgroundImage;
+  final String? backgroundImage;
   final Widget? bottomNavigationBar;
   final Widget? bottomSheet;
   final Widget? drawer;
@@ -26,7 +26,7 @@ class CustomScaffold extends StatelessWidget {
       this.floatingActionButtonLocation,
       this.resizeToAvoidBottomInset,
       this.scaffoldKey,
-      required this.backgroundImage});
+      this.backgroundImage});
 
   @override
   Widget build(BuildContext context) {
@@ -38,12 +38,14 @@ class CustomScaffold extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(
-              backgroundImage,
-            ),
-            fit: BoxFit.cover,
-          ),
+          image: backgroundImage != null
+              ? DecorationImage(
+                  image: AssetImage(
+                    backgroundImage!,
+                  ),
+                  fit: BoxFit.cover,
+                )
+              : null,
         ),
         child: body,
       ),
