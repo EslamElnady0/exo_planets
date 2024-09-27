@@ -1,3 +1,4 @@
+import 'package:exo_planets/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:exo_planets/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,8 @@ class AppRouter {
     switch (settings.name) {
       case splash:
         return _viewMaterialRoute(view: const SplashView());
+      case onboarding:
+        return _viewMaterialRoute(view: const OnboardingView());
       default:
         return null;
     }
