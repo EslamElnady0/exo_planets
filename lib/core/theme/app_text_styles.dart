@@ -22,4 +22,14 @@ class AppTextStyles {
     fontWeight: FontWeight.w600,
     color: AppColors.white,
   );
+  static TextStyle font19WhiteW600 = TextStyle(
+    fontSize: 19.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.white,
+  );
+  static TextStyle font50WhiteW600 = TextStyle(
+    fontSize: 50.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.white,
+  );
 }

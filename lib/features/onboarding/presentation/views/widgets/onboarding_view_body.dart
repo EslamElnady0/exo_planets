@@ -1,10 +1,10 @@
-import 'package:exo_planets/core/helpers/constants.dart';
-import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/features/onboarding/presentation/ui%20cubit/cubit/onboarding_cubit.dart';
 import 'package:exo_planets/features/onboarding/presentation/views/widgets/indicator_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'onboarding_pages_page_view.dart';
 
 class OnboardingViewBody extends StatefulWidget {
   const OnboardingViewBody({super.key});
@@ -42,20 +42,8 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
         return Stack(
           alignment: Alignment.bottomCenter,
           children: [
-            SizedBox(
-              height: context.height,
-              width: context.width,
-              child: PageView.builder(
-                  scrollDirection: Axis.horizontal,
-                  controller: _pageController,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: Constants.onBoardingItems.length,
-                  itemBuilder: (context, index) => Image.asset(
-                        Constants.onBoardingItems[index].backgroundImage,
-                        height: context.height,
-                        width: context.width,
-                        fit: BoxFit.cover,
-                      )),
+            OnBoardingPagesPageView(
+              pageController: _pageController,
             ),
             context.read<OnboardingCubit>().currentIndex == 3
                 ? const SizedBox.shrink()
