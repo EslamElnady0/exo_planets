@@ -25,7 +25,8 @@ class OnBoardingPageBody extends StatelessWidget {
           Text(
             Constants.onBoardingItems[index].description,
             style: AppTextStyles.font26WhiteW600,
-          )
+          ),
+          vGap(113.h),
         ],
       ),
     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../core/helpers/constants.dart';
 import '../../ui cubit/cubit/onboarding_cubit.dart';
 
 class UnSelectedPageItem extends StatelessWidget {
@@ -32,7 +33,16 @@ class UnSelectedPageItem extends StatelessWidget {
               padding: EdgeInsets.all(33.r),
               child: Container(
                 decoration: BoxDecoration(
-                    border: Border.all(color: Colors.white, width: 2),
+                    gradient:
+                        index < context.read<OnboardingCubit>().currentIndex
+                            ? Constants.customRedGradient
+                            : null,
+                    border: Border.all(
+                        color:
+                            index < context.read<OnboardingCubit>().currentIndex
+                                ? Colors.transparent
+                                : Colors.white,
+                        width: 2),
                     shape: BoxShape.circle),
               ),
             ),
