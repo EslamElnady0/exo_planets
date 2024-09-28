@@ -13,7 +13,9 @@ import '../theme/app_text_styles.dart';
 class CustomButton extends StatelessWidget {
   final String text;
   final VoidCallback onTap;
-  const CustomButton({super.key, required this.text, required this.onTap});
+  final TextStyle? style;
+  const CustomButton(
+      {super.key, required this.text, required this.onTap, this.style});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +42,8 @@ class CustomButton extends StatelessWidget {
             children: [
               Text(
                 text,
-                style: AppTextStyles.font21WhiteW500,
+                style: style ??
+                    AppTextStyles.font21WhiteW500.copyWith(letterSpacing: 1.5),
               ),
               hGap(10),
               SvgPicture.asset(
