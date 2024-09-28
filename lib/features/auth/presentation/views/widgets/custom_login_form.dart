@@ -1,11 +1,10 @@
-import 'package:exo_planets/core/helpers/app_assets.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
-import 'package:exo_planets/core/theme/app_colors.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:exo_planets/core/widgets/custom_button.dart';
 import 'package:exo_planets/features/auth/presentation/views/widgets/custom_auth_text_form_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'auth_header.dart';
 
 class CustomLoginForm extends StatelessWidget {
   final GlobalKey<FormState> formKey;
@@ -23,19 +22,7 @@ class CustomLoginForm extends StatelessWidget {
       key: formKey,
       child: Column(
         children: [
-          vGap(20),
-          Image.asset(
-            AppAssets.exoPlanets,
-            height: 108.h,
-            width: 216.w,
-          ),
-          vGap(13),
-          Divider(
-            height: 1.h,
-            color: AppColors.white,
-            thickness: 0.5,
-          ),
-          vGap(34),
+          const AuthHeader(),
           CustomAuthTextFormField(
               hintText: "Email",
               controller: emailController,
