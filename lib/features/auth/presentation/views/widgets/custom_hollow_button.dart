@@ -20,7 +20,7 @@ class CustomHollowButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: double.infinity,
-        padding: EdgeInsets.symmetric(vertical: 20.h),
+        padding: EdgeInsets.symmetric(vertical: 18.h),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20.r),
             border: Border.all(color: AppColors.white, width: 2)),

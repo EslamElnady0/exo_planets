@@ -1,9 +1,11 @@
+import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:exo_planets/core/widgets/custom_button.dart';
 import 'package:exo_planets/features/auth/presentation/views/widgets/custom_auth_text_form_field.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../core/routes/app_router.dart';
 import 'auth_header.dart';
 
 class CustomLoginForm extends StatelessWidget {
@@ -36,7 +38,9 @@ class CustomLoginForm extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.pushNamed(AppRouter.forgotPassword);
+                },
                 child: Text(
                   "Forgot your password?",
                   style: AppTextStyles.font12WhiteW600,
