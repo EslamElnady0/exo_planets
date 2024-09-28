@@ -1,3 +1,5 @@
+import 'package:exo_planets/core/helpers/extensions.dart';
+import 'package:exo_planets/core/routes/app_router.dart';
 import 'package:exo_planets/core/widgets/custom_button.dart';
 import 'package:exo_planets/features/auth/presentation/views/widgets/custom_hollow_button.dart';
 import 'package:flutter/material.dart';
@@ -20,14 +22,18 @@ class AuthViewBody extends StatelessWidget {
           const AuthViewTexts(),
           CustomHollowButton(
             text: "Log In",
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(AppRouter.logIn);
+            },
             style: AppTextStyles.font21WhiteW500
                 .copyWith(letterSpacing: 1.5, fontWeight: FontWeight.w600),
           ),
           vGap(24),
           CustomButton(
               text: "Sign Up",
-              onTap: () {},
+              onTap: () {
+                context.pushNamed(AppRouter.signUp);
+              },
               style: AppTextStyles.font21WhiteW500
                   .copyWith(letterSpacing: 1.5, fontWeight: FontWeight.w600)),
         ],
