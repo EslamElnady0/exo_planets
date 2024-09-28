@@ -12,6 +12,7 @@ class AppAssets {
   static const String oImage = 'assets/images/oImage.png';
   static const String authBackground = 'assets/images/authBackground.png';
   static const String exoPlanets = 'assets/images/exoPlanets.png';
+  static const String homeBackground = 'assets/images/homeBackground.png';
   static const String signInUpBackground =
       'assets/images/signInUpBackground.png';
 

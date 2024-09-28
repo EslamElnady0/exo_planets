@@ -24,7 +24,7 @@ class ExoPlanetsApp extends StatelessWidget {
         title: "Exo Planets",
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRouter.onGenerateRoute,
-        initialRoute: AppRouter.splash,
+        initialRoute: AppRouter.home,
       ),
     );
   }
