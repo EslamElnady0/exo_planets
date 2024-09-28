@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "411603606636",
+    "project_id": "exo-planets-641b0",
+    "storage_bucket": "exo-planets-641b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411603606636:android:52e27cc0fbad2533a24c49",
+        "android_client_info": {
+          "package_name": "com.exo.exo_planets"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr6s-DSQwVjS-5M53tNqP5lUQjvlLr2fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,10 +1,9 @@
-import 'package:exo_planets/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/helpers/validators_regex.dart';
 import 'auth_header.dart';
 import 'custom_auth_text_form_field.dart';
+import 'sign_up_button_bloc_builder.dart';
 
 class CustomSignUpForm extends StatelessWidget {
   final GlobalKey<FormState> formKey;
@@ -36,7 +35,7 @@ class CustomSignUpForm extends StatelessWidget {
           vGap(16),
           CustomAuthTextFormField(
               hintText: "Last Name",
-              controller: firstNameController,
+              controller: lastNameController,
               suffixIcon: Icons.person_outline),
           vGap(16),
           CustomAuthTextFormField(
@@ -54,6 +53,7 @@ class CustomSignUpForm extends StatelessWidget {
           vGap(16),
           CustomAuthTextFormField(
               hintText: "Password",
+              obscureText: true,
               controller: passwordController,
               validator: (p0) {
                 if (p0 == null || p0.isEmpty) {
@@ -68,6 +68,7 @@ class CustomSignUpForm extends StatelessWidget {
           CustomAuthTextFormField(
               hintText: "Confirm Password",
               controller: confirmPasswordController,
+              obscureText: true,
               validator: (p0) {
                 if (p0 == null || p0.isEmpty) {
                   return "This field is required";
@@ -78,12 +79,12 @@ class CustomSignUpForm extends StatelessWidget {
               },
               suffixIcon: Icons.lock_outline),
           vGap(30),
-          CustomButton(
-            onTap: () {
-              if (formKey.currentState!.validate()) {}
-            },
-            text: "Sign Up",
-          )
+          SignUpButtonBlocConsumer(
+              formKey: formKey,
+              firstNameController: firstNameController,
+              lastNameController: lastNameController,
+              emailController: emailController,
+              passwordController: passwordController),
         ],
       ),
     );
