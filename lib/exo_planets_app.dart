@@ -13,7 +13,11 @@ class ExoPlanetsApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
-        theme: AppTheme.darkTheme,
+        theme: ThemeData(
+          fontFamily: "Lato",
+        ),
+        themeMode: ThemeMode.dark,
+        darkTheme: AppTheme.darkTheme,
         title: "Exo Planets",
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRouter.onGenerateRoute,

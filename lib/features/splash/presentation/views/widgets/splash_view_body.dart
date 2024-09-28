@@ -1,10 +1,12 @@
 import 'package:exo_planets/core/helpers/app_assets.dart';
 import 'package:exo_planets/core/helpers/extensions.dart';
-import 'package:exo_planets/core/routes/app_router.dart';
+import 'package:exo_planets/core/helpers/shared_pref_helper.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../../core/routes/app_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -83,9 +85,11 @@ class _SplashViewBodyState extends State<SplashViewBody>
     // Start the animation
     _controller.forward();
 
-    Future.delayed(const Duration(milliseconds: 3500), () {
+    Future.delayed(const Duration(milliseconds: 3500), () async {
       context.pushReplacementNamed(
-        AppRouter.onboarding,
+        await SharedPrefHelper.getBool("isOnBoardingViewed")
+            ? AppRouter.auth
+            : AppRouter.onboarding,
       );
     });
   }
