@@ -9,10 +9,6 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    precacheImage(const AssetImage(AppAssets.onboardingFirst), context);
-    precacheImage(const AssetImage(AppAssets.onboardingSecond), context);
-    precacheImage(const AssetImage(AppAssets.onboardingThird), context);
-    precacheImage(const AssetImage(AppAssets.onboardingThird), context);
     precacheImage(const AssetImage(AppAssets.authBackground), context);
     return const CustomScaffold(
       body: SplashViewBody(),

@@ -84,7 +84,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
     // Start the animation
     _controller.forward();
-
     Future.delayed(const Duration(milliseconds: 3500), () async {
       context.pushReplacementNamed(
         await SharedPrefHelper.getBool("isOnBoardingViewed")
@@ -102,6 +101,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(const AssetImage(AppAssets.onboardingFirst), context);
     return AnimatedBuilder(
       animation: _controller,
       builder: (context, child) {

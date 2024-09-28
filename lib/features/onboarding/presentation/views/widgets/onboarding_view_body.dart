@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../core/helpers/app_assets.dart';
 import 'onboarding_pages_page_view.dart';
 
 class OnboardingViewBody extends StatefulWidget {
@@ -37,6 +38,9 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(const AssetImage(AppAssets.onboardingSecond), context);
+    precacheImage(const AssetImage(AppAssets.onboardingThird), context);
+    precacheImage(const AssetImage(AppAssets.onboardingFourth), context);
     return BlocBuilder<OnboardingCubit, OnboardingState>(
       builder: (context, state) {
         return Stack(
