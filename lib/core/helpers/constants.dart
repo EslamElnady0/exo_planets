@@ -41,11 +41,14 @@ class Constants {
         backgroundImage: AppAssets.onboardingSecond,
         richText: RichText(
             text: TextSpan(
-                text: "Discover ",
-                style: AppTextStyles.font50WhiteW600
-                    .copyWith(color: AppColors.darkerRed),
+                text: "Inter",
+                style: AppTextStyles.font50WhiteW600,
                 children: [
-              TextSpan(text: "New Worlds", style: AppTextStyles.font50WhiteW600)
+              TextSpan(
+                  text: "active ",
+                  style: AppTextStyles.font50WhiteW600
+                      .copyWith(color: AppColors.darkerRed)),
+              TextSpan(text: "Learning", style: AppTextStyles.font50WhiteW600)
             ]))),
     OnBoardingItem(
         description:
@@ -53,11 +56,11 @@ class Constants {
         backgroundImage: AppAssets.onboardingThird,
         richText: RichText(
             text: TextSpan(
-                text: "Discover ",
+                text: "Fun     ",
                 style: AppTextStyles.font50WhiteW600
                     .copyWith(color: AppColors.darkerRed),
                 children: [
-              TextSpan(text: "New Worlds", style: AppTextStyles.font50WhiteW600)
+              TextSpan(text: "Challenges", style: AppTextStyles.font50WhiteW600)
             ]))),
     OnBoardingItem(
         description:
@@ -65,11 +68,12 @@ class Constants {
         backgroundImage: AppAssets.onboardingFourth,
         richText: RichText(
             text: TextSpan(
-                text: "Discover ",
+                text: "Get Ready ",
                 style: AppTextStyles.font50WhiteW600
                     .copyWith(color: AppColors.darkerRed),
                 children: [
-              TextSpan(text: "New Worlds", style: AppTextStyles.font50WhiteW600)
+              TextSpan(
+                  text: "for the Journey", style: AppTextStyles.font50WhiteW600)
             ]))),
   ];
 }

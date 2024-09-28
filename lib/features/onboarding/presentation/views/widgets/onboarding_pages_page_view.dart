@@ -28,7 +28,9 @@ class OnBoardingPagesPageView extends StatelessWidget {
                 ),
                 fit: BoxFit.cover,
               )),
-              child: OnBoardingPageBody())),
+              child: OnBoardingPageBody(
+                index: index,
+              ))),
     );
   }
 }
