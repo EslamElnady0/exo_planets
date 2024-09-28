@@ -7,6 +7,7 @@ import '../../../../../core/theme/app_colors.dart';
 class CustomAuthTextFormField extends StatelessWidget {
   final String hintText;
   final IconData suffixIcon;
+  final bool obscureText;
   final TextEditingController controller;
   final String? Function(String?)? validator;
 
@@ -15,11 +16,13 @@ class CustomAuthTextFormField extends StatelessWidget {
       required this.hintText,
       required this.suffixIcon,
       required this.controller,
-      this.validator});
+      this.validator,
+      this.obscureText = false});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+        obscureText: obscureText,
         controller: controller,
         validator: validator ??
             (value) {

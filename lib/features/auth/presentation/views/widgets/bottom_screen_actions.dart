@@ -1,6 +1,11 @@
+import 'package:exo_planets/core/helpers/extensions.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../../core/routes/app_router.dart';
+import '../../view models/login ano cubit/login_ano_cubit.dart';
 
 class BottomScreenActions extends StatelessWidget {
   final bool backExists;
@@ -34,10 +39,10 @@ class BottomScreenActions extends StatelessWidget {
             ? GestureDetector(
                 behavior: HitTestBehavior.translucent,
                 onTap: () async {
-                  // await context.read<LogInAnoCubit>().signInAnonymous();
-                  // if (context.mounted) {
-                  //   Navigator.of(context).pushNamed(AppRouter.home);
-                  // }
+                  await context.read<LoginAnoCubit>().loginAno();
+                  if (context.mounted) {
+                    context.pushNamed(AppRouter.home);
+                  }
                 },
                 child: Row(
                   children: [

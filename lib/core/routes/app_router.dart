@@ -2,6 +2,7 @@ import 'package:exo_planets/features/auth/presentation/views/auth_view.dart';
 import 'package:exo_planets/features/auth/presentation/views/forgot_password_view.dart';
 import 'package:exo_planets/features/auth/presentation/views/log_in_view.dart';
 import 'package:exo_planets/features/auth/presentation/views/sign_up_view.dart';
+import 'package:exo_planets/features/home/presentation/views/home_view.dart';
 import 'package:exo_planets/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:exo_planets/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,8 @@ class AppRouter {
         return _viewMaterialRoute(view: const SignUpView());
       case forgotPassword:
         return _viewMaterialRoute(view: const ForgotPasswordView());
+      case home:
+        return _viewMaterialRoute(view: const HomeView());
       default:
         return null;
     }

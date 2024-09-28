@@ -17,6 +17,7 @@ class UserModel {
       name: json['name'],
       uid: json['uid'],
       email: json['email'],
+      points: json['points'],
       imageUrl: json['imageUrl'],
     );
   }
@@ -26,6 +27,7 @@ class UserModel {
       'name': name,
       'email': email,
       'uid': uid,
+      'points': points,
       'imageUrl': imageUrl,
     };
   }
