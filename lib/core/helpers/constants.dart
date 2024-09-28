@@ -31,7 +31,7 @@ class Constants {
             text: TextSpan(
                 text: "Discover ",
                 style: AppTextStyles.font50WhiteW600
-                    .copyWith(color: AppColors.darkerRed),
+                    .copyWith(color: AppColors.lightRed),
                 children: [
               TextSpan(text: "New Worlds", style: AppTextStyles.font50WhiteW600)
             ]))),
@@ -47,7 +47,7 @@ class Constants {
               TextSpan(
                   text: "active ",
                   style: AppTextStyles.font50WhiteW600
-                      .copyWith(color: AppColors.darkerRed)),
+                      .copyWith(color: AppColors.lightRed)),
               TextSpan(text: "Learning", style: AppTextStyles.font50WhiteW600)
             ]))),
     OnBoardingItem(
@@ -58,7 +58,7 @@ class Constants {
             text: TextSpan(
                 text: "Fun     ",
                 style: AppTextStyles.font50WhiteW600
-                    .copyWith(color: AppColors.darkerRed),
+                    .copyWith(color: AppColors.lightRed),
                 children: [
               TextSpan(text: "Challenges", style: AppTextStyles.font50WhiteW600)
             ]))),
@@ -70,7 +70,7 @@ class Constants {
             text: TextSpan(
                 text: "Get Ready ",
                 style: AppTextStyles.font50WhiteW600
-                    .copyWith(color: AppColors.darkerRed),
+                    .copyWith(color: AppColors.lightRed),
                 children: [
               TextSpan(
                   text: "for the Journey", style: AppTextStyles.font50WhiteW600)
