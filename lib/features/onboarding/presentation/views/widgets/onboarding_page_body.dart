@@ -4,6 +4,7 @@ import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../core/widgets/custom_button.dart';
 import 'onboarding_skip_button.dart';
 
 class OnBoardingPageBody extends StatelessWidget {
@@ -27,6 +28,11 @@ class OnBoardingPageBody extends StatelessWidget {
             style: AppTextStyles.font26WhiteW600,
           ),
           vGap(113.h),
+          index == 3
+              ? const CustomButton(
+                  text: "Get Started",
+                )
+              : const SizedBox.shrink()
         ],
       ),
     );
