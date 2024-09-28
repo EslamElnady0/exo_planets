@@ -5,6 +5,7 @@ import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../core/helpers/app_assets.dart';
 import '../../../../../core/helpers/shared_pref_helper.dart';
 import '../../../../../core/routes/app_router.dart';
 import '../../../../../core/widgets/custom_button.dart';
@@ -16,6 +17,7 @@ class OnBoardingPageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(const AssetImage(AppAssets.authBackground), context);
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w),
       child: Column(

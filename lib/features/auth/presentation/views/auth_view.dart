@@ -8,6 +8,7 @@ class AuthView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(const AssetImage(AppAssets.signInUpBackground), context);
     return const CustomScaffold(
       backgroundImage: AppAssets.authBackground,
       body: AuthViewBody(),
