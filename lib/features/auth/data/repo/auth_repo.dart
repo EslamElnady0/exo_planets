@@ -67,6 +67,19 @@ class AuthRepo {
     }
   }
 
+  Future<Either<Failure, void>> logInAno() async {
+    try {
+      await auth.signInAnonymously();
+      return right(null);
+    } catch (e) {
+      if (e is FirebaseAuthException) {
+        return left(ServerFailure.fromFirebaseException(e));
+      }
+      log(e.toString());
+      return left(ServerFailure(errMessage: "Something went wrong"));
+    }
+  }
+
   Future<Either<Failure, void>> resetPassword({required String email}) async {
     try {
       await auth.sendPasswordResetEmail(email: email);
