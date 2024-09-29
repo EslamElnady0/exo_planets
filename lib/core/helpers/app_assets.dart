@@ -23,4 +23,21 @@ class AppAssets {
   static const String quiz = 'assets/svgs/quiz.svg';
   static const String settings = 'assets/svgs/settings.svg';
   static const String bottomNavBackground = 'assets/svgs/bottom_background.svg';
+
+  static const String appBarLogo = 'assets/images/appBar_logo.png';
+  static const String appBarProfile = 'assets/images/appBar_profile.png';
+  static const String homeBackGround = 'assets/images/home_back_ground.png';
+  static const String rightbuttonIcon = 'assets/images/RightbuttonIcon.png';
+  static const String leftbuttonIcon = 'assets/images/LeftbuttonIcon.png';
+  static const String circleOfPlent = 'assets/images/circleOfPlent.png';
+
+  static const String planetProximab3DModel = "assets/3d/Proxima_b_1_13776.glb";
+  static const String planetKeple186f3DModel = "assets/3d/kepler186f.glb";
+  static const String planetGliese5813DModel = "assets/3d/gliese_581_g.glb";
+  static const String planetWASP12bDModel = "assets/3d/WASP-12b_1_249888.glb";
+  static const String planet55CancrieDModel =
+      "assets/3d/55_Cancri_e_1_24364.glb";
+  static const String planetKEPLER22BDModel = "assets/3d/kepler_22b.glb";
+  static const String planetErisModel = "assets/3d/Eris_1_2326.glb";
+  static const String planetVestaModel = "assets/3d/vesta.glb";
 }

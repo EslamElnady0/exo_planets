@@ -76,4 +76,29 @@ class AppTextStyles {
     fontWeight: FontWeight.w600,
     color: AppColors.white,
   );
+  static TextStyle font14GrayW400 = LatoTextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColors.grey,
+  );
+  static TextStyle font20WhiteW600 = LatoTextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.white,
+  );
+  static TextStyle font20RedW600 = LatoTextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.lightRed,
+  );
+  static TextStyle font28VeryLightGrayW500 = LatoTextStyle(
+    fontSize: 28.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.veryLightGray,
+  );
+  static TextStyle font12LightGrayW400 = LatoTextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColors.ligtGray,
+  );
 }
