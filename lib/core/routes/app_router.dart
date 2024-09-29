@@ -1,3 +1,4 @@
+import 'package:exo_planets/bottom_nav_bart.dart';
 import 'package:exo_planets/features/auth/presentation/views/auth_view.dart';
 import 'package:exo_planets/features/auth/presentation/views/forgot_password_view.dart';
 import 'package:exo_planets/features/auth/presentation/views/log_in_view.dart';
@@ -15,6 +16,7 @@ class AppRouter {
   static const String logIn = '/logIn';
   static const String signUp = '/signUp';
   static const String forgotPassword = '/forgotPassword';
+  static const String bottomNavigationBar = '/bottomNavigationBar';
 
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -32,6 +34,8 @@ class AppRouter {
         return _viewMaterialRoute(view: const ForgotPasswordView());
       case home:
         return _viewMaterialRoute(view: const HomeView());
+      case bottomNavigationBar:
+        return _viewMaterialRoute(view: const BottomNavBarController());
       default:
         return null;
     }

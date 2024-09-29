@@ -17,4 +17,10 @@ class AppAssets {
 
   ////////////////////// svgs //////////////////////    //////
   static const String arrowForward = 'assets/svgs/arrowForward.svg';
+  static const String home = 'assets/svgs/home.svg';
+  static const String planets = 'assets/svgs/planets.svg';
+  static const String main = 'assets/svgs/main.svg';
+  static const String quiz = 'assets/svgs/quiz.svg';
+  static const String settings = 'assets/svgs/settings.svg';
+  static const String bottomNavBackground = 'assets/svgs/bottom_background.svg';
 }
