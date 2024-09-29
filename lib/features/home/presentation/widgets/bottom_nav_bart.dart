@@ -1,4 +1,3 @@
-import 'package:exo_planets/core/helpers/app_assets.dart';
 import 'package:exo_planets/core/helpers/constants.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
 import 'package:exo_planets/features/home/presentation/widgets/bottom_nav_bar_background.dart';
@@ -13,23 +12,9 @@ class BottomNavBarController extends StatefulWidget {
   State<BottomNavBarController> createState() => _BottomNavBarControllerState();
 }
 
-int selectedIndex = 0;
-
 class _BottomNavBarControllerState extends State<BottomNavBarController> {
   int index = 0;
-  bool showAdmin = false;
-  List images = [
-    AppAssets.home,
-    AppAssets.planets,
-    AppAssets.quiz,
-    AppAssets.settings,
-  ];
-  List labels = [
-    'Home',
-    'Planets',
-    'Quiz',
-    'Settings',
-  ];
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,8 +51,11 @@ class _BottomNavBarControllerState extends State<BottomNavBarController> {
                               index = rowIndex;
                             });
                           },
-                          child: bottomNavBarItem(images[rowIndex],
-                              labels[rowIndex], rowIndex, selectedIndex),
+                          child: bottomNavBarItem(
+                              Constants.images[rowIndex],
+                              Constants.labels[rowIndex],
+                              rowIndex,
+                              selectedIndex),
                         ),
                       );
                     }),

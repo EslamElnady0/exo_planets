@@ -96,4 +96,17 @@ class Constants {
       ),
     ),
   ];
+
+  static const List<String> images = [
+    AppAssets.home,
+    AppAssets.planets,
+    AppAssets.quiz,
+    AppAssets.settings,
+  ];
+  static const List<String> labels = [
+    'Home',
+    'Planets',
+    'Quiz',
+    'Settings',
+  ];
 }
