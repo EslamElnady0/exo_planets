@@ -1,6 +1,6 @@
 import 'package:exo_planets/core/helpers/app_assets.dart';
+import 'package:exo_planets/core/helpers/constants.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
-import 'package:exo_planets/features/home/presentation/views/home_view.dart';
 import 'package:exo_planets/features/home/presentation/widgets/bottom_nav_bar_background.dart';
 import 'package:exo_planets/features/home/presentation/widgets/leaders_board_widget.dart';
 import 'package:flutter/material.dart';
@@ -85,27 +85,7 @@ class _BottomNavBarControllerState extends State<BottomNavBarController> {
           ),
         ),
       ),
-      body: IndexedStack(
-        index: index,
-        children: const [
-          HomeView(),
-          Scaffold(
-            body: Center(
-              child: Text('Planets View'),
-            ),
-          ),
-          Scaffold(
-            body: Center(
-              child: Text('Quiz View'),
-            ),
-          ),
-          Scaffold(
-            body: Center(
-              child: Text('Settings View'),
-            ),
-          ),
-        ],
-      ),
+      body: IndexedStack(index: index, children: Constants.bottomNavBarViews),
     );
   }
 }

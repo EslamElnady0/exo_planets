@@ -3,6 +3,7 @@ import 'package:exo_planets/core/theme/app_colors.dart';
 import 'package:exo_planets/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
+import '../../features/home/presentation/views/home_view.dart';
 import '../../features/onboarding/presentation/ui model/on_boarding_item.dart';
 
 class Constants {
@@ -75,5 +76,24 @@ class Constants {
               TextSpan(
                   text: "for the Journey", style: AppTextStyles.font50WhiteW600)
             ]))),
+  ];
+
+  static const List<Widget> bottomNavBarViews = [
+    HomeView(),
+    Scaffold(
+      body: Center(
+        child: Text('Planets View'),
+      ),
+    ),
+    Scaffold(
+      body: Center(
+        child: Text('Quiz View'),
+      ),
+    ),
+    Scaffold(
+      body: Center(
+        child: Text('Settings View'),
+      ),
+    ),
   ];
 }
