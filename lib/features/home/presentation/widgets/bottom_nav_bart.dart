@@ -28,7 +28,6 @@ class _BottomNavBarControllerState extends State<BottomNavBarController> {
             clipBehavior: Clip.none,
             children: [
               const BottomNavBarBackground(),
-
               // bottom nav items
               Positioned.directional(
                 textDirection: TextDirection.ltr,
