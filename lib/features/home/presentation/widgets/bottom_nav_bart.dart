@@ -1,11 +1,12 @@
 import 'package:exo_planets/core/helpers/app_assets.dart';
-import 'package:exo_planets/core/helpers/spacing.dart';
 import 'package:exo_planets/core/theme/app_colors.dart';
 import 'package:exo_planets/core/widgets/inner_shadow.dart';
 import 'package:exo_planets/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+
+import 'bottom_nav_bar_item.dart';
 
 class BottomNavBarController extends StatefulWidget {
   const BottomNavBarController({super.key});
@@ -81,11 +82,8 @@ class _BottomNavBarControllerState extends State<BottomNavBarController> {
                                   index = rowIndex;
                                 });
                               },
-                              child: bottomNavBarItem(
-                                images[rowIndex],
-                                labels[rowIndex],
-                                rowIndex,
-                              ),
+                              child: bottomNavBarItem(images[rowIndex],
+                                  labels[rowIndex], rowIndex, selectedIndex),
                             ),
                           );
                         }),
@@ -149,34 +147,4 @@ class _BottomNavBarControllerState extends State<BottomNavBarController> {
       ),
     );
   }
-}
-
-Widget bottomNavBarItem(String image, String label, int bottomIndex) {
-  return SizedBox(
-    width: 48.0.w,
-    height: 48.0.h,
-    child: Column(
-      children: [
-        SvgPicture.asset(
-          width: 22.0.w,
-          height: 22.0.h,
-          colorFilter: ColorFilter.mode(
-            selectedIndex == bottomIndex ? AppColors.lightRed : AppColors.grey,
-            BlendMode.srcIn,
-          ),
-          image,
-        ),
-        vGap(4.0),
-        Text(
-          label,
-          style: TextStyle(
-            fontSize: 10.0.sp,
-            color: selectedIndex == bottomIndex
-                ? AppColors.lightRed
-                : AppColors.grey,
-          ),
-        ),
-      ],
-    ),
-  );
 }

@@ -1,4 +1,4 @@
-import 'package:exo_planets/bottom_nav_bart.dart';
+import 'package:exo_planets/features/home/presentation/widgets/bottom_nav_bart.dart';
 import 'package:exo_planets/features/auth/presentation/views/auth_view.dart';
 import 'package:exo_planets/features/auth/presentation/views/forgot_password_view.dart';
 import 'package:exo_planets/features/auth/presentation/views/log_in_view.dart';
