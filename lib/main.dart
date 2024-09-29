@@ -13,13 +13,18 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   setupServiceLocator();
-  // make navigation bar transparent
+
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
+      // make navigation bar transparent
       systemNavigationBarColor: Colors.transparent,
+      // set status bar color
+      statusBarIconBrightness: Brightness.light,
+      statusBarColor: Colors.transparent,
     ),
   );
   // make flutter draw behind navigation bar
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+
   runApp(const ExoPlanetsApp());
 }
